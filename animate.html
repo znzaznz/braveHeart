@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,usr-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>animate</title>
+    <style type="text/css">
+        .heart{
+            display: inline-block;
+            margin: 100px;
+            position: relative;
+            animation: jump 2s infinite alternate;
+        }
+        @keyframes jump {
+            0%{}
+            100%{
+                transform: scale(1.2);
+            }
+        }
+        .left{
+            height: 100px;
+            width: 100px;
+            border-radius: 50px 50px 0 0;
+            background-color: red;
+            transform: rotateZ(45deg) translateY(80px);
+            position: absolute;
+            bottom: 0px;
+            left: 100px;
+        }
+        .right{
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            border-radius: 50px 0 0 50px;
+            background-color: red;
+            transform: rotateZ(45deg) translateX(80px);
+            bottom: 0px;
+            left: -100px;
+        }
+        .main{
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            transform: rotateZ(45deg);
+        }
+    </style>
+</head>
+<body>
+<div class="heart">
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="main"></div>
+</div>
+</body>
+</html>
